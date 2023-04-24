@@ -1,15 +1,24 @@
-# PYTHON_AGE_01-1
+import os
 
-from datetime import date
+import azure.functions as func
 
-# PYTHON_AGE_01-2
+def main(req: func.HttpRequest) -> func.HttpResponse:
+    # ファイルの作成先のパスを指定
+    file_path = os.path.join(os.getcwd(), "example.txt")
 
-def calc():
-    # 生年月日
-    d0 = date(1998, 5, 12)
+    # ファイルに書き込むデータを指定
+    file_data = "Hello, Azure Functions!"
 
-    # 現在の日付
-    d1 = date.today()
+    # ファイルを書き込みモードで開き、データを書き込む
+    with open(file_path, "w") as file:
+        file.write(file_data)
 
-    print(d1)
+    # レスポンスメッセージを作成
+    response = func.HttpResponse(
+        f"ファイルを作成しました: {file_path}",
+        status_code=200
+    )
+
+    return response
+
 
