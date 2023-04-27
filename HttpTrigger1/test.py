@@ -1,24 +1,13 @@
-import os
+import logging
 
 import azure.functions as func
 
-def main(req: func.HttpRequest) -> func.HttpResponse:
-    # ファイルの作成先のパスを指定
-    file_path = os.path.join(os.getcwd(), "example.txt")
+def main(req: func.HttpRequest,outputblob:func.Out[str]) -> func.HttpResponse:
+    logging.info('Python HTTP trigger function processed a request.')
 
-    # ファイルに書き込むデータを指定
-    file_data = "Hello, Azure Functions!"
+    # 出力バインドしたファイルに変数の値を書き込みます
+    outputtext = outputblob.set("テスト")
 
-    # ファイルを書き込みモードで開き、データを書き込む
-    with open(file_path, "w") as file:
-        file.write(file_data)
-
-    # レスポンスメッセージを作成
-    response = func.HttpResponse(
-        f"ファイルを作成しました: {file_path}",
-        status_code=200
-    )
-
-    return response
+    return func.HttpResponse(f"{outputtext}")
 
 

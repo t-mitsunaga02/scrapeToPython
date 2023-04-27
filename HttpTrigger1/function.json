@@ -19,8 +19,8 @@
     {
       "type": "blob",
       "direction": "out",
-      "name": "outdata2blob",
-      "path": "scrapefile/",
+      "name": "outputblob",
+      "path": "scrapefile/scrape.csv",
       "connection": "AzureWebJobsStorage"
     }
   ]
