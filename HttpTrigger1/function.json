@@ -19,8 +19,8 @@
     {
       "type": "blob",
       "direction": "out",
-      "name": "outputBlob",
-      "path": "outcontainer/{rand-guid}",
+      "name": "outdata2blob",
+      "path": "scrapefile/",
       "connection": "AzureWebJobsStorage"
     }
   ]
