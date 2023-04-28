@@ -22,20 +22,6 @@
       "name": "outputblob",
       "path": "scrapefile/scrape.csv",
       "connection": "AzureWebJobsStorage"
-    },
-    {
-      "name":"inputblob",
-      "type":"blob",
-      "direction":"in",
-      "path":"scrapefile/*.csv",
-      "connection":"AzureWebJobsStorage"
-    },
-    {
-      "name":"copyblob",
-      "type":"blob",
-      "direction":"out",
-      "path":"scrapefile/{name}-{date}.csv",
-      "connection":"AzureWebJobsStorage"
     }
   ]
 }
