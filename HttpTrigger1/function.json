@@ -34,7 +34,7 @@
       "name":"copyblob",
       "type":"blob",
       "direction":"out",
-      "path":"scrapefile/old/{name}-{date}.csv",
+      "path":"scrapefile/{name}-{date}.csv",
       "connection":"AzureWebJobsStorage"
     }
   ]
