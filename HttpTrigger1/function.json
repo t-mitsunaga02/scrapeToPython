@@ -27,14 +27,14 @@
       "name":"inputblob",
       "type":"blob",
       "direction":"in",
-      "path":"scrapefile/scrape.csv",
+      "path":"scrapefile/*.csv",
       "connection":"AzureWebJobsStorage"
     },
     {
       "name":"copyblob",
       "type":"blob",
       "direction":"out",
-      "path":"scrapefile/old/scrape-{date}.csv",
+      "path":"scrapefile/old/{name}-{date}.csv",
       "connection":"AzureWebJobsStorage"
     }
   ]
