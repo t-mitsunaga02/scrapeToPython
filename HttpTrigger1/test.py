@@ -2,7 +2,7 @@ import logging
 
 import azure.functions as func
 
-def main(req: func.HttpRequest,outputblob:func.Out[str],inputblob:func.InputStream[str],copyblob:func.Out[str]) -> func.HttpResponse:
+def main(req: func.HttpRequest,outputblob:func.Out[str],inputblob:str,copyblob:func.Out[str]) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     # ファイルのバックアップ
