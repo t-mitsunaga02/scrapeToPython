@@ -21,21 +21,21 @@
       "direction": "out",
       "name": "outputblob",
       "path": "scrapefile/scrape.csv",
-      "connection": "DefaultEndpointsProtocol=https;AccountName=data2blob;AccountKey=2KrSZVrI3fbULPqM5wbgg0IbrOvao1y6UdLA97RHMeLeCeHIYaJ7O8ufTxR2/zhNrt+y7rdrJx4L+ASt56BFRA==;EndpointSuffix=core.windows.net"
+      "connection": "AzureWebJobsStorage"
     },
     {
       "name":"inputblob",
       "type":"blob",
       "direction":"in",
       "path":"scrapefile/scrape.csv",
-      "connection":"DefaultEndpointsProtocol=https;AccountName=data2blob;AccountKey=2KrSZVrI3fbULPqM5wbgg0IbrOvao1y6UdLA97RHMeLeCeHIYaJ7O8ufTxR2/zhNrt+y7rdrJx4L+ASt56BFRA==;EndpointSuffix=core.windows.net"
+      "connection":"AzureWebJobsStorage"
     },
     {
       "name":"copyblob",
       "type":"blob",
       "direction":"out",
       "path":"scrapefile/old/scrape-back.csv",
-      "connection":"DefaultEndpointsProtocol=https;AccountName=data2blob;AccountKey=2KrSZVrI3fbULPqM5wbgg0IbrOvao1y6UdLA97RHMeLeCeHIYaJ7O8ufTxR2/zhNrt+y7rdrJx4L+ASt56BFRA==;EndpointSuffix=core.windows.net"
+      "connection":"AzureWebJobsStorage"
     }
   ]
 }
